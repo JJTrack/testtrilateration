@@ -34,3 +34,21 @@ ctx.fillRect(beacon.x * 20, beacon.y * 20, 20, 20);
 
 // Just using Two Cartesian dimensions, two measured slant ranges (Trilateration)
 
+// r1 and r2 represent the distance from each node to the beacon after it has been converted from the RSSI value
+let r1 = Math.sqrt(Math.pow(beacon.x - node1.x, 2) + Math.pow(beacon.y - node1.y, 2));
+let r2 = Math.sqrt(Math.pow(node2.x - beacon.x, 2) + Math.pow(node2.y - beacon.y, 2));
+
+// U is the distance between the nodes
+let U = Math.sqrt(Math.pow(node2.x - node1.x, 2) + Math.pow(node2.y - node1.y, 2));
+
+let calculatedX = (Math.abs(Math.pow(r1, 2) - Math.pow(r2, 2)) + Math.pow(U, 2)) / (2 * U)
+
+
+
+console.log(r1);
+console.log(r2);
+console.log(U);
+console.log(beacon.x, calculatedX);
+
+
+
