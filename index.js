@@ -67,3 +67,20 @@ console.log(calculatedX, calculatedY);
 ctx2.fillStyle = "#00FF00";
 ctx2.fillRect(calculatedX * 20, calculatedY * 20, 20, 20);
 
+// Draw nodes with radiuses
+ctx2.beginPath();
+ctx2.arc(node1.x, node1.y, r1*20, 0, 2 * Math.PI, false);
+ctx2.strokeStyle = '#003300';
+ctx2.stroke();
+
+ctx2.beginPath();
+ctx2.arc(node2.x * 20, node2.y * 20, r2*20, 0, 2 * Math.PI, false);
+ctx2.strokeStyle = '#00FFFF';
+ctx2.stroke();
+
+ctx2.beginPath();
+ctx2.arc(node3.x * 20, node3.y * 20, r3*20, 0, 2 * Math.PI, false);
+ctx2.strokeStyle = '#FF0000';
+ctx2.stroke();
+
+
